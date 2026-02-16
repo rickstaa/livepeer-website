@@ -98,7 +98,7 @@ function ScaleVis() {
               className="w-1.5 rounded-sm"
               style={{
                 height: `${h * 2.5}px`,
-                background: `rgba(52,211,153,${0.25 + i * 0.08})`,
+                background: `rgba(64,191,134,${0.25 + i * 0.08})`,
               }}
             />
           ))}

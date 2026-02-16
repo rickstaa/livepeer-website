@@ -14,10 +14,10 @@ export default function Home() {
       <Hero />
       <WhatIsLivepeer />
       <Capabilities />
-      <NetworkParticipants />
       <WhyLivepeer />
-      <BuiltOnLivepeer />
       <NetworkStats />
+      <BuiltOnLivepeer />
+      <NetworkParticipants />
       <DeveloperCTA />
       <CommunityCTA />
     </>

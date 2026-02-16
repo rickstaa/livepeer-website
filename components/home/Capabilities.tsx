@@ -64,7 +64,7 @@ function WorldsVisual() {
         className="pointer-events-none absolute inset-x-0 h-px"
         style={{
           top: "52%",
-          background: "linear-gradient(to right, transparent, rgba(52,211,153,0.2) 30%, rgba(52,211,153,0.3) 50%, rgba(52,211,153,0.2) 70%, transparent)",
+          background: "linear-gradient(to right, transparent, rgba(64,191,134,0.2) 30%, rgba(64,191,134,0.3) 50%, rgba(64,191,134,0.2) 70%, transparent)",
         }}
       />
 

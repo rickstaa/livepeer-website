@@ -17,7 +17,6 @@ const footerNav = [
     title: "Developers",
     links: [
       { label: "Documentation", href: EXTERNAL_LINKS.docs },
-      { label: "Livepeer Studio", href: EXTERNAL_LINKS.studio },
       { label: "Grants", href: EXTERNAL_LINKS.grants },
       { label: "GitHub", href: EXTERNAL_LINKS.github },
     ],

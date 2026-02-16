@@ -78,9 +78,9 @@ const JUNCTIONS: number[][] = [
 
 // Brand greens with slight variation
 const COLORS: number[][] = [
-  [82, 186, 139],  // bright
+  [64, 191, 134],  // bright
   [30, 153, 96],   // mid
-  [52, 200, 140],  // light
+  [64, 191, 134],  // light
   [24, 121, 78],   // brand
   [40, 160, 110],  // warm
 ];
@@ -215,7 +215,7 @@ export default function LiveNetwork({
           sy = jy * h;
         const r = 8 * brightMult;
         const grad = ctx.createRadialGradient(sx, sy, 0, sx, sy, r);
-        grad.addColorStop(0, `rgba(52, 200, 140, ${0.18 * brightMult})`);
+        grad.addColorStop(0, `rgba(64, 191, 134, ${0.18 * brightMult})`);
         grad.addColorStop(0.5, `rgba(30, 153, 96, ${0.06 * brightMult})`);
         grad.addColorStop(1, "transparent");
         ctx.fillStyle = grad;
@@ -224,7 +224,7 @@ export default function LiveNetwork({
         // Tiny center dot
         ctx.beginPath();
         ctx.arc(sx, sy, 1.2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(82, 186, 139, ${0.3 * brightMult})`;
+        ctx.fillStyle = `rgba(64, 191, 134, ${0.3 * brightMult})`;
         ctx.fill();
       }
 

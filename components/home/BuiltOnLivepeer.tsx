@@ -21,14 +21,7 @@ function DaydreamLogo({ className }: { className?: string }) {
           background: "linear-gradient(135deg, #F73B41, #FF982E, #2FBEC5, #36619D)",
         }}
       />
-      <span
-        className="text-[17px] font-bold tracking-tight"
-        style={{
-          background: "linear-gradient(90deg, #FF982E, #2FBEC5)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
+      <span className="text-[17px] font-bold tracking-tight text-white">
         Daydream
       </span>
     </div>
@@ -240,7 +233,7 @@ function StudioVisual() {
       </div>
 
       {/* Bottom gradient + logo */}
-      <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-transparent" />
       <div className="absolute bottom-3 left-5">
         <StudioLogo className="h-5 w-auto opacity-90" />
       </div>
@@ -248,63 +241,73 @@ function StudioVisual() {
   );
 }
 
-/* ── Product visual: Streamplace — live collaborative streaming ── */
+/* ── Product visual: Streamplace — decentralized social livestreaming ── */
 function StreamplaceVisual() {
   return (
     <div className="relative h-[220px] overflow-hidden bg-[#0a0a0a]">
       {/* Streamplace brand: pink/mauve tones */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#140d10] via-[#0a0a0a] to-[#110d0f]" />
 
-      {/* Multi-participant layout */}
-      <div className="absolute inset-4">
-        <div className="grid h-full grid-cols-3 gap-1.5">
-          {/* Main speaker */}
-          <div className="relative col-span-2 row-span-2 overflow-hidden rounded-md border border-white/[0.06] bg-[#111]">
-            <div className="flex h-full items-center justify-center">
-              <div className="relative flex flex-col items-center">
-                <div className="h-10 w-10 rounded-full bg-white/[0.06]" />
-                <div className="mt-1 h-8 w-14 rounded-t-full bg-white/[0.04]" />
-              </div>
-            </div>
-            <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1.5 rounded bg-black/50 px-2 py-0.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
-              <span className="font-mono text-[7px] text-white/40">Speaker</span>
+      {/* Subtle brand glow */}
+      <div
+        className="absolute h-[120px] w-[120px] rounded-full opacity-15 blur-[50px]"
+        style={{ left: "20%", top: "15%", background: "#de91a6" }}
+      />
+
+      <div className="absolute inset-4 flex gap-3">
+        {/* Stream viewer — main content area */}
+        <div className="relative flex-1 overflow-hidden rounded-md border border-white/[0.06] bg-[#111]">
+          {/* Video placeholder with silhouette */}
+          <div className="flex h-full items-center justify-center">
+            <div className="relative flex flex-col items-center">
+              <div className="h-12 w-12 rounded-full bg-white/[0.06]" />
+              <div className="mt-1 h-8 w-16 rounded-t-full bg-white/[0.04]" />
             </div>
           </div>
 
-          {/* Thumbnails */}
-          {[1, 2, 3, 4].map((i) => (
-            <div
-              key={i}
-              className="relative overflow-hidden rounded-md border border-white/[0.06] bg-[#111]"
-            >
-              <div className="flex h-full items-center justify-center">
-                <div className="h-5 w-5 rounded-full bg-white/[0.04]" />
-              </div>
-            </div>
-          ))}
-        </div>
+          {/* LIVE badge */}
+          <div className="absolute left-2 top-2 flex items-center gap-1.5 rounded bg-red-500/20 px-2 py-0.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-red-400 animate-pulse" />
+            <span className="font-mono text-[8px] font-medium text-red-400/80">LIVE</span>
+          </div>
 
-        {/* Stream toolbar */}
-        <div className="absolute bottom-1 left-1/2 flex -translate-x-1/2 items-center gap-2 rounded-full bg-black/60 px-3 py-1.5">
-          {[0, 1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="flex h-5 w-5 items-center justify-center rounded-full bg-white/[0.08]"
-            >
-              <div className="h-2 w-2 rounded-sm bg-white/20" />
-            </div>
-          ))}
-          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500/25">
-            <div className="h-2 w-2 rounded-sm bg-red-400/60" />
+          {/* Viewer count */}
+          <div className="absolute right-2 top-2 rounded bg-black/40 px-2 py-0.5">
+            <span className="font-mono text-[8px] text-white/30">847 watching</span>
+          </div>
+
+          {/* Streamer handle */}
+          <div className="absolute bottom-2 left-2 flex items-center gap-1.5">
+            <div className="h-4 w-4 rounded-full bg-[#de91a6]/30" />
+            <span className="font-mono text-[8px] text-white/40">@alice.bsky.social</span>
+          </div>
+
+          {/* AT Protocol badge */}
+          <div className="absolute bottom-2 right-2 rounded bg-white/[0.04] px-1.5 py-0.5">
+            <span className="font-mono text-[7px] text-white/20">AT Protocol</span>
           </div>
         </div>
-      </div>
 
-      {/* LIVE indicator */}
-      <div className="absolute right-7 top-7 flex items-center gap-1.5">
-        <span className="h-1.5 w-1.5 rounded-full bg-red-400 animate-pulse" />
-        <span className="font-mono text-[9px] text-red-400/60">LIVE</span>
+        {/* Chat / social sidebar */}
+        <div className="flex w-[100px] flex-col gap-1.5 overflow-hidden rounded-md border border-white/[0.06] bg-[#0c0c0c] p-2">
+          <div className="font-mono text-[7px] text-white/25 uppercase">Chat</div>
+          {[
+            { handle: "bob", msg: "this is amazing" },
+            { handle: "cara", msg: "how is this decentralized?" },
+            { handle: "dave", msg: "built on livepeer infra" },
+            { handle: "eve", msg: "no cold starts either" },
+            { handle: "frank", msg: "open source too" },
+          ].map((c, i) => (
+            <div key={i} className="text-[7px] leading-tight">
+              <span style={{ color: "rgba(222,145,166,0.6)" }}>@{c.handle}</span>
+              <span className="text-white/25"> {c.msg}</span>
+            </div>
+          ))}
+          {/* Chat input */}
+          <div className="mt-auto rounded border border-white/[0.06] bg-white/[0.02] px-1.5 py-1">
+            <span className="font-mono text-[7px] text-white/15">Say something...</span>
+          </div>
+        </div>
       </div>
 
       {/* Bottom gradient + logo */}
@@ -382,14 +385,14 @@ const projects = [
   {
     Visual: DaydreamVisual,
     description:
-      "Open platform for real-time AI video workflows — from generative effects to interactive streaming.",
+      "APIs for building interactive AI experiences — from video to games and beyond.",
     href: "https://daydream.live",
     linkLabel: "Visit Daydream",
   },
   {
     Visual: StudioVisual,
     description:
-      "Developer gateway to the Livepeer network. APIs for livestreaming, on-demand video, and AI-powered video processing at scale.",
+      "APIs for livestreaming, on-demand video, and AI-powered video processing at scale.",
     href: "https://livepeer.studio",
     linkLabel: "Visit Studio",
   },

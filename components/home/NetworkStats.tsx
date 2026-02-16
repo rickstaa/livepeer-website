@@ -69,7 +69,7 @@ export default function NetworkStats() {
             className="text-center"
           >
             <p className="mb-3 font-mono text-sm font-medium tracking-wider text-white/40 uppercase">
-              Network
+              Proven at Scale
             </p>
             <h2 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               Proven at scale

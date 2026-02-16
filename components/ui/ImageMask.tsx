@@ -137,8 +137,8 @@ export default function ImageMask({
           className="scan-line absolute left-0 right-0 h-[2px]"
           style={{
             background:
-              "linear-gradient(to bottom, transparent, rgba(82,186,139,0.08), transparent)",
-            boxShadow: "0 0 20px 8px rgba(82,186,139,0.02)",
+              "linear-gradient(to bottom, transparent, rgba(64,191,134,0.08), transparent)",
+            boxShadow: "0 0 20px 8px rgba(64,191,134,0.02)",
             willChange: "transform",
           }}
         />

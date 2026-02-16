@@ -118,8 +118,8 @@ function PulseTrail() {
         width: "6px",
         height: "6px",
         background:
-          "radial-gradient(circle, rgba(52,211,153,0.9) 0%, rgba(52,211,153,0.3) 50%, transparent 70%)",
-        boxShadow: `0 0 10px 3px rgba(52,211,153,${pos.opacity * 0.4}), 0 0 20px 6px rgba(52,211,153,${pos.opacity * 0.15})`,
+          "radial-gradient(circle, rgba(64,191,134,0.9) 0%, rgba(64,191,134,0.3) 50%, transparent 70%)",
+        boxShadow: `0 0 10px 3px rgba(64,191,134,${pos.opacity * 0.4}), 0 0 20px 6px rgba(64,191,134,${pos.opacity * 0.15})`,
       }}
     />
   );
@@ -177,7 +177,7 @@ export default function Hero() {
             width: "40px",
             height: "40px",
             background:
-              "radial-gradient(circle, rgba(52,211,153,0.25) 0%, rgba(52,211,153,0.08) 40%, transparent 70%)",
+              "radial-gradient(circle, rgba(64,191,134,0.25) 0%, rgba(64,191,134,0.08) 40%, transparent 70%)",
           }}
         />
         {RAYS.map((angle, i) => (
@@ -307,8 +307,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Generate, transform, and interpret live video streams with
-            low-latency AI on an elastic GPU network.
+            Generate, transform, and interpret live video streams
+            with low-latency AI inference on an elastic GPU network.
           </motion.p>
 
           <motion.div
